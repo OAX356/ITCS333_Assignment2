@@ -99,7 +99,14 @@ $numColumns = count($columns);
             <!-- Table to display data -->
             <table>
                 <thead data-theme="light">
-                  
+                    <tr>
+                        <!-- Table headers based on the selected language -->
+                        <?php
+                        for ($i = 0; $i < $numColumns; ++$i) {
+                            echo "<th>" . htmlspecialchars($lang[$columns[$i]]) . "</th>"; 
+                        }
+                        ?>
+                    </tr>
                 </thead>
                 <tbody data-theme="light">
                     
