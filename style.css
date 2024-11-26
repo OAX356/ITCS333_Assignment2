@@ -13,6 +13,10 @@ h1, h6 {
     color: #333;
 }
 
+h1 {
+    color: #005190;
+}
+
 /* Main styling */
 main {
     margin: 0 5px;
@@ -36,6 +40,10 @@ th, td {
     border: 1px solid #dee2e6;
 }
 
+th {
+    color: #005190;
+}
+
 /* body cell hover effect */
 td:hover {
     background-color: #83c6f9;
@@ -43,6 +51,19 @@ td:hover {
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 800px) {
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    h1, h6 {
+        margin-bottom: 0.5rem;
+    }
+
+    table {
+        margin-top: 0;
+    }
+
     th, td {
         font-size: 0.9rem;
         padding: 0.5rem;
