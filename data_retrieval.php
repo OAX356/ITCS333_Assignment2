@@ -109,7 +109,16 @@ $numColumns = count($columns);
                     </tr>
                 </thead>
                 <tbody data-theme="light">
-                    
+                    <!-- Table rows dynamically generated from API data -->
+                    <?php
+                    for ($i = 0; $i < $totalCount; ++$i) {
+                        echo '<tr>';
+                        for ($j = 0; $j < $numColumns; ++$j) {
+                            echo "<td>" . htmlspecialchars($row[$i][$columns[$j]]) . "</td>"; 
+                        }
+                        echo '</tr>';
+                    }
+                    ?>
                 </tbody>
             </table>
         </div>
