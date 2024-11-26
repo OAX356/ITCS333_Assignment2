@@ -77,7 +77,22 @@ $numColumns = count($columns);
 </head>
 <body>
     <header>
-
+        <!-- Display page title based on selected language -->
+        <h1>
+            <?php 
+            if ($_GET['lang'] == 'en') echo "University of Bahrain Students Enrollment by Nationality";
+            else echo "طلبة جامعة البحرين المقيدين بحسب جنسياتهم";
+            ?>
+        </h1>
+        <!-- Language switcher links -->
+        <h6>
+            <?php if ($_GET['lang'] == 'en'): ?>
+                <a href="<?= "data_retrieval.php?lang=ar" ?>">العربية</a>
+            <?php endif ?>
+            <?php if ($_GET['lang'] == 'ar'): ?>
+                <a href="<?= "data_retrieval.php?lang=en" ?>">English</a>
+            <?php endif ?>
+        </h6>
     </header>
     <main>
         <div class="overflow-auto">
